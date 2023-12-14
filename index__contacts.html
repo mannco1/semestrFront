@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contacts</title>
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap">
+
+</head>
+<body>
+   <div class="header">
+      <div class="header_contant">
+<div class="Header__flex">
+   <a href="index.html">
+      <div class="top">
+      <img src="public/images/me.png" alt="">
+      <div class="nick">
+      <div class="header_name">Mudritsyn<br>Mikhail</div>
+      <div class="header_rank">Fullstack</div>
+         </div>
+         </div>
+   </a>
+   
+
+   
+
+<!-- <nav class="nav">
+   <ul  class="horizon_ul">
+      <li class="menu-item"><a href="index.html">Home</a></li>
+      <li class="menu-item"><a href="index__portfolio.html">About</a></li>
+      <li class="menu-item active"><a href="index__contacts.html">Contacts</a></li>
+   </ul>
+</nav> -->
+
+
+
+
+
+
+<nav class="nav">
+   <ul class="horizon_ul">
+      <li class="menu-item"><a href="index.html">Home</a></li>
+      <li class="menu-item"><a href="index__portfolio.html">About</a></li>
+      <li class="menu-item active"><a href="index__contacts.html">Contacts</a></li>
+   </ul>
+</nav>
+
+<!-- Иконка бургерменю -->
+<div class="burger">
+   <span></span>
+</div>
+
+</div>
+
+
+<script>
+document.querySelector('.burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav').classList.toggle('open');
+        })
+</script>
+
+
+
+</div>
+
+ 
+
+
+
+
+<div class="line_down"></div>
+</div>
+
+
+
+
+
+
+<div class="contactsframe">
+   <div class="contacts__flex">
+
+<div class="block__getintouch">
+   <div class="Get_intouch__flex">
+   <h1 class="contact_h1">Get in touch</h1>
+   <div class="contacts__text">Conntact me every time day and night,<br>
+      there man ways u can do it  </div>
+      <div class="contacts__socialmedia">
+         
+      <ul>
+         <li><img src="public\images\icons__contacts\icons8-почта-50 1.png" alt=""> f.mannco@yandex.ru</li>
+         <li><img src="public\images\icons__contacts\free-icon-whatsapp-2111774 1.png" alt="">+79772599137</li>
+         <li><a href="https://vk.com/mudritsyn" target="_blank" ><img src="public\images\icons__contacts\free-icon-vk-2111828 1.png" alt=""></a><a href="https://vk.com/mudritsyn" target="_blank">vk.com/mudritsyn</a></li>
+         <li><a href="https://t.me/ncmannco" target="_blank" ><img src="public\images\icons__contacts\free-icon-telegram-739260 1.png" alt=""></a> <a href="https://t.me/ncmannco" target="_blank">t.me/ncmannco</a></li>
+         <li><a href="https://github.com/mannco1" target="_blank" ><img src="public\images\icons__contacts\icons8-github-96 1.png" alt=""></a><a href="https://github.com/mannco1" target="_blank">github.com/mannco1</a></li>
+      </ul>
+      </div>
+   </div>
+
+</div>
+
+
+<div class="block__contactform">
+   <h1 class="contact_h1">Contact form</h1>
+<div class="form__space in1">
+   <input type="text" name="myInput" id="myInput" placeholder="Full name">
+</div>
+<div class="form__space in2">
+   <input type="mail" name="myInput" id="myInput2" placeholder="Email address">
+</div>
+<div class="form__space in3">
+   <input type="text" name="myInput" id="myInput3" placeholder="Messege me">
+</div>
+
+<div id="sendButton" class="button_ct">
+   <span>Send</span>
+   <div class="ct_button_img"><img  src="public/images/button get start.png" alt=""></div>
+</div>
+
+
+<script>
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Получаем ссылку на кнопку "Send"
+      let sendButton = document.getElementById("sendButton");
+    
+      // Добавляем обработчик события на кнопку "Send"
+      sendButton.addEventListener("click", function () {
+        // Получаем ссылки на поля ввода
+        var fullNameField = document.getElementById("myInput");
+        var emailAddressField = document.getElementById("myInput2");
+        var messageField = document.getElementById("myInput3");
+    
+        // Создаем объект для данных, которые вы хотите сохранить
+        var userData = {
+          fullName: fullNameField.value,
+          emailAddress: emailAddressField.value,
+          message: messageField.value
+        };
+
+        // Вызываем функцию для сохранения данных в файл JSON
+        saveDataToFile(userData);
+
+        // Очищаем значения полей ввода
+        fullNameField.value = "";
+        emailAddressField.value = "";
+        messageField.value = "";
+      });
+
+      // Функция для сохранения данных в файл JSON
+      function saveDataToFile(data) {
+  let existingData = localStorage.getItem('userData');
+
+  // Проверяем, есть ли данные в localStorage и они не равны null
+  if (existingData !== null) {
+    existingData = JSON.parse(existingData);
+  } else {
+    existingData = []; // Если данных нет, создаем пустой массив
+  }
+
+  existingData.push(data); // Добавляем новые данные в массив
+
+  // Записываем обновленные данные обратно в localStorage
+  localStorage.setItem('userData', JSON.stringify(existingData, null, 2));
+}
+
+        
+      }
+    );
+  </script>
+
+
+
+</div>
+   
+</div>
+</div>
+
+</body>
+</html>

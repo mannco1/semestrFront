@@ -1,0 +1,848 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+
+
+
+
+
+
+
+a {
+   color: #18b5a4; /* Замените ваш_цвет на желаемый цвет (например, "red" или "#ff0000") */
+   text-decoration: none; /* Убирает подчеркивание у ссылок */
+ }
+
+
+ a:visited {
+   color: green; /* Замените ваш_цвет на желаемый цвет */
+   text-decoration: none; /* Убирает подчеркивание у ссылок */
+ }
+ 
+
+a:hover{
+   color: rgb(148, 216, 148);
+   transition: all 0.2s;
+}
+
+
+
+
+   
+   
+
+/* .container{
+   
+   background-image: url('../public/images/фото_фон.png');
+}
+.contant {
+   margin: 0px auto;
+   max-width: 886px;
+} */
+
+.header{
+   background-color: #5e5373;
+   min-height: 174px;
+   /* margin: 0 0 80px 0; */
+   width: 100%;
+  
+   
+}
+
+
+
+.header_contant{
+  
+}
+   .Header__flex{
+      max-width: 886px;
+      margin: 0px auto;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between;
+      padding: 23px 0 21px 0;
+      
+   
+   }
+   
+
+
+
+.top {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   margin: 0 0 0 6px;
+}
+
+
+
+
+.nick {
+}
+
+
+.header_name {
+   color: #ffffff;
+font-family: Istok Web;
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.header_rank {
+   color: rgba(243, 214, 214, 0.85);
+font-family: Istok Web;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+
+.horizon_ul{
+   list-style: none; 
+   padding: 0; 
+   display: flex; 
+   
+   color: #ffffff;
+font-family: Inter;
+font-size: 25px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+/* margin:  0 0 0 160px; */
+}
+.horizon_ul li {
+   margin-right: 68px; /* Добавляем отступы между элементами (по вашему выбору) */
+   
+}
+
+
+.horizon_ul .menu-item a {
+   text-decoration: underline; 
+   text-decoration-color: #18b5a4; 
+   color: #ffffff;
+}
+ .menu-item.active a {
+   
+   text-decoration-color: #18b5a4;
+   color: #18b5a4; 
+ }
+
+.horizon_ul li :hover {
+   text-decoration: underline;
+   color: #18b5a4;
+   transition: all 0.2s;
+ }
+ 
+ 
+
+ 
+ 
+
+.line_down{
+width: 100%;
+height: 3px;
+background: #18b5a4;
+}
+/* nav header */
+
+/* index1 */
+.centralframe {
+   
+   background: url('../public/images/фото_фон.png');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 100vh;
+}
+
+
+
+.centralframe__centraltext {
+    
+   
+}
+.centralframe__centraltext {
+ display: flex;
+  flex-direction: column;
+  justify-content: center; /* Отцентрировать вертикально по центру */
+  align-items: center; /* Отцентрировать горизонтально по центру */
+  height: 100vh;
+}
+
+.ct__name {
+  
+  margin: 0;
+  color: #FFF;
+
+font-family: Istok Web;
+font-size: 45px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.ct_name2 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #FFF;
+
+font-family: Istok Web;
+font-size: 45px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+
+
+/* button */
+
+/* .wrap {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ } */
+ 
+ .button {
+   
+   min-width: 300px;
+   min-height: 60px;
+   font-family: 'Nunito', sans-serif;
+   font-size: 22px;
+   text-transform: uppercase;
+   letter-spacing: 1.3px;
+   font-weight: 700;
+   color: #313133;
+   background: #4FD1C5;
+ background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+   border: none;
+   border-radius: 1000px;
+   box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+   transition: all 0.3s ease-in-out 0s;
+   cursor: pointer;
+   outline: none;
+   position: relative;
+   padding: 10px;
+   
+   }
+ 
+ button::before {
+ content: '';
+   border-radius: 1000px;
+   min-width: calc(300px + 12px);
+   min-height: calc(60px + 12px);
+   border: 6px solid #00FFCB;
+   box-shadow: 0 0 60px rgba(0,255,203,.64);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   opacity: 0;
+   transition: all .3s ease-in-out 0s;
+ }
+ 
+ .button:hover, .button:focus {
+   color: #313133;
+   transform: translateY(-6px);
+ }
+ 
+ button:hover::before, button:focus::before {
+   opacity: 1;
+ }
+ 
+ button::after {
+   content: '';
+   width: 30px; height: 30px;
+   border-radius: 100%;
+   border: 6px solid #00FFCB;
+   position: absolute;
+   z-index: -1;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   animation: ring 1.5s infinite;
+   
+ }
+ 
+ button:hover::after, button:focus::after {
+   animation: none;
+   display: none;
+ }
+
+ 
+ 
+ @keyframes ring {
+   0% {
+     width: 30px;
+     height: 30px;
+     opacity: 1;
+   }
+   100% {
+     width: 300px;
+     height: 300px;
+     opacity: 0;
+   }
+
+
+
+ }
+
+/* button */
+
+/* .ct_button_text:hover {
+  
+} */
+
+
+/* Стили для стрелки (по желанию) */
+
+
+/* index1 */
+
+/* index2html */
+
+.portfolio__frame {
+   
+   
+}
+.page__name {
+}
+.class_9cubsflex {
+   display: flex;
+   flex-wrap: wrap; /* Переносим на новую строку, если блоков не помещается в одной строке */
+   justify-content: space-around; /* Распределяем блоки равномерно по ширине контейнера */
+   align-items: flex-start; 
+
+}
+.proj_cube {
+   
+   background-color:#18b5a4;
+   
+}
+
+.gif__1 {
+   padding: 10px;
+}
+
+.gif__2 {
+}
+
+.text_cube{
+   font-size: 20px;
+   font-family: Istok Web;
+   padding: 10px;
+   
+   color: white;
+   
+   margin: 0 10px  10px 10px;
+}
+
+
+/* index2html */
+
+
+/* contacts html 3 */
+
+
+.contactsframe {
+   max-width: 886px;
+   margin: 80px auto 0;
+}
+.contacts__flex {
+   max-width: 886px;
+   margin: 0px auto;
+   display: flex; /* Используем Flexbox */
+   flex-wrap: wrap;
+   align-items: center; 
+   justify-content: space-between;
+   
+}
+
+
+
+.contact_h1{
+   color: #000;
+font-family: Inter;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+padding: 0 0 18px 0;
+text-decoration: underline;
+text-decoration-color: #18b5a4;
+}
+
+
+
+
+.block__getintouch {
+}
+
+
+
+
+.contacts__text {
+   color: rgba(0, 0, 0, 0.63);
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+padding: 0 0 32px 0;
+
+   
+}
+.contacts__socialmedia ul {
+   list-style: none;
+   padding: 0;
+  
+ }
+ 
+ .contacts__socialmedia li {
+   display: flex; /* Элементы также становятся flex-контейнерами */
+   align-items: center; /* Выравниваем элементы по вертикали */
+   margin-right: 20px; /* Добавляем небольшой отступ между элементами (по вашему желанию) */
+ }
+ 
+ .contacts__socialmedia img {
+   margin-right: 10px; /* Опциональный отступ между изображением и текстом */
+ }
+
+
+.block__contactform {
+  
+}
+
+
+
+
+
+.form__space.in1 {
+width: 420px;
+height: 45px;
+  border: 1px solid #000000;
+  background-color: #fff;
+  font-size: 16px;
+  padding: 5px;
+}
+.form__space.in2 {
+width: 420px;
+height: 45px;
+  border: 1px solid #000000;
+  background-color: #fff;
+  font-size: 16px;
+  padding: 5px;
+  margin: 22px 0;
+}
+.form__space.in3 {
+   width: 420px;
+   height: 90px;
+  border: 1px solid #000000;
+  background-color: #fff;
+  font-size: 16px;
+  padding: 5px;
+  
+}
+
+
+
+
+
+
+.form__space:hover {
+   border-color: #18b5a4;
+   transition: all 0.2s;
+ }
+ 
+.form__space:focus {
+   border-color: #007bff;
+ }
+ 
+ .form__space:disabled {
+   background-color: #eee;
+   color: #777;
+ }
+
+
+ .button_ct {
+   display: flex;
+   align-items: center;
+   
+   border-radius: 200px;
+   border: 2px solid #000;
+   background: #18b5a4;
+   border-radius: 5px;
+   cursor: pointer;
+   
+
+   width: 203px;
+   height: 58px;
+   flex-shrink: 0;
+   padding: 10px 35px;
+   margin: 22px 0;
+
+   color: #D9D9D9;
+font-family: Istok Web;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+}
+
+
+
+.ct_button_img{
+   max-height: 30px;
+   
+}
+
+.button_ct:hover {
+   background-color: #D9D9D9;
+   color: #18b5a4;
+   transition: all 0.4s;
+   
+}
+
+
+/* бургер */
+ 
+.open{
+   display: flex !important;
+}
+
+
+.nav{
+   display: flex;
+   
+   
+   
+}
+
+.horizon_ul{
+   width: 100%;
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+}
+
+.burger{
+   display: none;
+   position: relative;
+   z-index: 50;
+   align-items: center;
+   justify-content: flex-end;
+   width: 30px;
+   height: 18px;
+}
+
+.burger span{
+   height: 2px;
+   width: 100%;
+   right: 0;
+   position: absolute;
+   margin: 0 25px 0 0;
+   transform: scale(1);
+   background-color: #18b5a4;
+}
+
+.burger::before, .burger::after{
+   content: '';
+   position: absolute;
+   height: 2px;
+   width: 100%;
+   background-color: #18b5a4;
+   transition: all 0.3s ease 0s;
+}
+
+.burger::before { 
+   top: 0;
+   margin: 0 25px 0 0;
+ }
+
+.burger::after { 
+   bottom: 0 ;
+   margin: 0 25px 0 0;
+}
+
+
+/* Добавляем класс active для анимации иконки бургера */
+.burger.active span { transform: scale(0) }
+
+.burger.active::before{
+   top: 50%;
+   transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+   bottom: 50%;
+   transform: rotate(45deg) translate(0, 50%);
+}
+
+
+
+@media (max-width: 767px) {
+
+   .burger { display: flex }
+
+   .nav{
+       display: none;
+       flex-direction: column; 
+       position: fixed;
+       height: 100%;
+       width: 100%;
+       top: 0; bottom: 0; left: 0; right: 0;
+       z-index: 50;
+       overflow-y: auto;
+       
+      
+       background-color: #5e5373;
+       animation: burgerAnimation 0.4s;
+   }
+
+   .horizon_ul{
+       flex-direction: column;
+       row-gap: 30px;
+   }
+}
+
+@keyframes burgerAnimation {
+   from {opacity: 0}
+   to {opacity: 1}
+}
+
+/* бургер */
+
+
+
+@media (max-width: 350px) {
+   .top img{
+      flex: 0 0 40px;
+      width:80px;
+}
+
+
+.header_name { font-size: 22px;}
+   .header_rank {font-size:17px;}
+
+}
+
+@media (max-width: 767px) {
+   .header{
+     
+      
+   }
+
+.horizon_ul{
+   
+}
+
+   
+
+
+   .horizon_ul li{  
+   
+   
+      /* background-color: transparent; */
+      /* color: #007bff; */
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      
+      
+   }
+   
+      .horizon_ul li :hover {
+         text-decoration: none;
+         color: #D9D9D9;
+         transition: all 0.2s;
+         
+       }
+       .horizon_ul .menu-item a{
+         border: 2px solid #18b5a4;
+         border-radius: 4px;
+      padding: 10px 20px;
+      
+         
+       }
+       .menu-item.active a {
+      
+         text-decoration-color: #ece89d;
+         color: #ece89d; 
+         border: 2px solid #18b5a4;
+         border-radius: 4px;
+      padding: 10px 20px;
+      
+       }
+
+       .contact_h1{
+         padding: 0 0 -18px 0;
+      }
+
+      .block__contactform {
+         margin: 0 0 0 25px;
+         
+   }
+   .block__getintouch{
+      margin: 0 0 0 25px;
+   }
+   .block__contactform{
+      padding: 50px 0 0 0;
+   }
+   .form__space{
+    
+   }
+   .in1 {
+      max-width: 50vw;
+   }
+   .in2 {
+      max-width: 50vw;
+   }
+   .in3 {
+      max-width: 80vw;
+   }
+   .nav{
+      padding: 100px 0px 0 80px;
+   }
+}
+
+@media (max-width: 321px) {
+
+
+   .form__space{
+    
+   }
+   .in1 {
+      max-width: 80vw;
+   }
+   .in2 {
+      max-width: 80vw;
+   }
+   .in3 {
+      max-width: 80vw;
+   }
+}
+
+
+@media (max-width: 550px) {
+   .centralframe {
+   
+      background-image: url('/public/images/фото_фон.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+   }
+   .centralframe__centraltext {
+       
+      
+   }
+   .centralframe__centraltext {
+    display: flex;
+     flex-direction: column;
+     justify-content: center; 
+     align-items: center; 
+      height: 100vh; 
+   }
+   
+   .ct__name {
+     
+     margin: 0;
+     color: #FFF;
+   
+   font-family: Istok Web;
+   font-size: 35px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   }
+   
+   .ct_name2 {
+     font-size: 16px;
+     margin: 10px 0;
+     color: #FFF;
+   
+   font-family: Istok Web;
+   font-size: 35px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   }
+}
+@media (max-width: 550px) {
+   .ct__name {
+     
+      margin: 0;
+      color: #FFF;
+    
+    font-family: Istok Web;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    }
+    
+    .ct_name2 {
+      font-size: 16px;
+      margin: 10px 0;
+      color: #FFF;
+    
+    font-family: Istok Web;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0 0 0 40px;
+    }
+    .button{
+      min-width: 250px;
+    }
+    .header{
+      min-height: 130px;
+    }
+    
+}
