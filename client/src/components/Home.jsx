@@ -6,7 +6,6 @@ import BurgerScript from './BurgerScript';
 const Home = () => {
     return (
         <div>
-            
             <header className="header">
                 <div className="header_contant">
                     <div className="Header__flex">
@@ -43,7 +42,7 @@ const Home = () => {
                     <div className="ct__name">Mikhail Mudritsyn</div>
                     <div className="ct_name2">Front and back developer</div>
                     <div className="ct_button">
-                        <a href="/"><button className="button">Get started </button></a>
+                        <a href="/about"><button className="button">Get started </button></a>
                     </div>
                 </div>
                 <script src="script.js"></script>
