@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -26,9 +27,13 @@ const Contact = mongoose.model('Contact', contactSchema);
 // Используем body-parser для обработки JSON-данных
 app.use(bodyParser.json());
 
+// Включаем CORS для разрешения запросов с другого домена
+app.use(cors());
+
 // Обрабатываем POST-запрос для сохранения данных
 app.post('/api/contacts', (req, res) => {
   const { fullName, emailAddress, message } = req.body;
+  console.log('Received data:', req.body); // Логируем полученные данные
 
   // Создаем новый объект Contact
   const newContact = new Contact({
@@ -39,8 +44,14 @@ app.post('/api/contacts', (req, res) => {
 
   // Сохраняем объект в базе данных
   newContact.save()
-    .then(() => res.status(201).json({ message: 'Contact saved successfully' }))
-    .catch(err => res.status(500).json({ error: err.message }));
+    .then(() => {
+      console.log('Contact saved successfully');
+      res.status(201).json({ message: 'Contact saved successfully' });
+    })
+    .catch(err => {
+      console.error('Error saving contact:', err);
+      res.status(500).json({ error: err.message });
+    });
 });
 
 // Запускаем сервер

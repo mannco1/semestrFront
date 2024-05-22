@@ -4,6 +4,7 @@ const ContactForm = () => {
   const [fullName, setFullName] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
   const [message, setMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSendClick = () => {
     const userData = {
@@ -12,20 +13,33 @@ const ContactForm = () => {
       message: message
     };
 
-    // Сохраняем данные в localStorage
-    let existingData = localStorage.getItem('userData');
-    if (existingData !== null) {
-      existingData = JSON.parse(existingData);
-    } else {
-      existingData = [];
-    }
-    existingData.push(userData);
-    localStorage.setItem('userData', JSON.stringify(existingData, null, 2));
-
-    // Очищаем поля ввода
-    setFullName('');
-    setEmailAddress('');
-    setMessage('');
+    // Отправка данных на сервер
+    fetch('http://localhost:5000/api/contacts', { // Убедитесь, что путь корректный
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(userData)
+    })
+    .then(response => {
+      if (response.ok) {
+        console.log('Данные успешно отправлены!');
+        // Очищаем поля ввода
+        setFullName('');
+        setEmailAddress('');
+        setMessage('');
+        setErrorMessage('');
+      } else {
+        response.json().then(errorData => {
+          console.error('Произошла ошибка при отправке данных:', errorData);
+          setErrorMessage('Ошибка: ' + (errorData.message || 'Не удалось отправить данные.'));
+        });
+      }
+    })
+    .catch(error => {
+      console.error('Произошла ошибка:', error);
+      setErrorMessage('Ошибка: ' + error.message);
+    });
   };
 
   return (
@@ -58,6 +72,8 @@ const ContactForm = () => {
           onChange={(e) => setMessage(e.target.value)}
         />
       </div>
+
+      {errorMessage && <div className="error-message">{errorMessage}</div>}
 
       <div className="button_ct" id="sendButton" onClick={handleSendClick}>
         <span>Send</span>

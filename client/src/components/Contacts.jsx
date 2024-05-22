@@ -26,7 +26,7 @@ const Contacts = () => {
             <header className="header">
                 <div className="header_contant">
                     <div className="Header__flex">
-                        <a href="index.html">
+                        <a href="/">
                             <div className="top">
                                 <img src={me} alt="" />
                                 
