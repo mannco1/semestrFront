@@ -5,19 +5,19 @@ const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://mongo:27017/contactFormDB';
 
 // Подключаемся к MongoDB
-mongoose.connect('mongodb://localhost:27017/contactFormDB', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
+mongoose.connect(MONGODB_URI, {
+  
 })
 .then(() => console.log('MongoDB connected'))
-.catch(err => console.log(err));
+.catch(err => console.log('Error connecting to MongoDB:', err));
 
 // Создаем схему для модели данных
 const contactSchema = new mongoose.Schema({
   fullName: String,
-  emailAddress: String,
+  emailAddress: String, 
   message: String
 });
 

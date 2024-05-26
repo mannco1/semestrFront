@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  server:
+    build:
+      context: ./server  # Путь к вашему Express приложению
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017/contactFormDB  # Используем имя сервиса 'mongo'
+    depends_on:
+      - mongo
+
+  client:
+    build:
+      context: ./client  # Путь к вашему React приложению
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+
+volumes:
+  mongo-data:
