@@ -1,7 +1,10 @@
 Запуск приложение из idea:
 
-client - npm start
-server - npm run dev
+client:  
+npm start
+
+server: 
+ npm run dev
 
 
 
@@ -18,15 +21,14 @@ docker login
 
 Шаг 3: Скачайте Docker-образы client,server и mongo
 Для скачивания образов выполните следующие команды:
-
+docker pull mongo:latest
 docker pull mannco1/dockersemestr-server:latest
 docker pull mannco1/dockersemestr-client:latest
-docker pull mongo:latest
+
 
 
 Шаг 4: Запустите ваши образы
 Запустите контейнеры с вашими образами:
-
+docker run -d --name mongodb -p 27017:27017 mongo:latest
 docker run -d --name server --link mongodb:mongo -p 5000:5000 mannco1/dockersemestr-server:latest
 docker run -d --name client -p 3000:3000 mannco1/dockersemestr-client:latest
-docker run -d --name mongodb -p 27017:27017 mongo:latest
